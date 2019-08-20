@@ -9,3 +9,32 @@
   position: relative;
   font-family: 'Montserrat', sans-serif;
 }
+#title1{
+  padding-bottom: 8%;
+}
+.decorated{
+     overflow: hidden;
+     text-align: center;
+     margin-top: 50px;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 350%;
+     color: white;
+ }
+.decorated > span{
+    position: relative;
+    display: inline-block;
+}
+.decorated > span:before, .decorated > span:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 1.5px solid;
+    width: 36%; /* half of limiter*/
+    margin: 0 20px;
+}
+.decorated > span:before{
+    right: 100%;
+}
+.decorated > span:after{
+    left: 100%;
+}
