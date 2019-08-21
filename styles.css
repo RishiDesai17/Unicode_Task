@@ -38,6 +38,18 @@
 .decorated > span:after{
     left: 100%;
 }
+.container {
+  display: block;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #241663;
+  border-radius: 15px;
+  padding-top: 40px;
+}
+.col {
+  margin: 10px 0 0 5%;
+}
 .content{
   font-family: 'Kalam', cursive;
 }
@@ -64,6 +76,23 @@ hr{
 }
 .fa:hover {
   opacity: 0.7;
+}
+.profile_icons {
+  display: inline-block;
+}
+.profile_details {
+  display: inline-block;
+}
+.fa-quote-left {
+  float: left;
+  margin-right: 40px;
+  padding-top:25px;
+  position: relative;
+  bottom: 40px;
+}
+.fa-quote-right {
+  float: right;
+  margin-bottom: 40px;
 }
 .container #share{
   visibility: hidden;
