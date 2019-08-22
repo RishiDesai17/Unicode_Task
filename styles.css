@@ -47,6 +47,9 @@
   border-radius: 15px;
   padding-top: 40px;
 }
+.profile_col {
+  text-align: center;
+}
 .col {
   margin: 10px 0 0 5%;
 }
