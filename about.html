@@ -8,10 +8,29 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Kalam&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Kalam|Audiowide&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <div style="text-align: center;">
+    <div id="popup-surrounding" style="display: none;">
+      <div id="popup" style=" background-color: #ff3f98">
+        <i class="fa fa-times-circle" style="font-size: 250%; float:right;" onclick="Close()"></i>
+        <div class="" style="float: left;">
+          <img src="news.jpg" style="margin-top: 30%" alt="">
+        </div>
+        <div style="" style="height: 100px;">
+          <center>
+            <h2>Subscribe to my newsletter</h2>
+            <h3>25% off...offer ends in</h3>
+            <h3 id="countdown"></h3>
+            <h3>Hurry!</h3>
+            <a href="subscribe.html">Subscribe!</a>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container-fluid" style="padding: 0;">
     <div class="hero-image">
       <nav class="navbar navbar-expand-sm bg-transparent navbar-light" style="position: fixed; top: 0;">
@@ -26,6 +45,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="about.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="subscribe.html">Subscribe</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="contact.html">Contact Me</a>
@@ -273,9 +295,8 @@
       </a>
     </div>
   </div>
-  <br>
-  <hr>
-  <footer id="footer" style="text-align: center; padding: 2% 0;">
+  <br><br>
+  <footer id="footer" style="text-align: center; padding: 2% 0; background-color:#fffcc1;">
     <div>
       <i class="fa fa-facebook"></i>
       <i class="fa fa-twitter"></i>
