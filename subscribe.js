@@ -57,7 +57,7 @@ function confirmPasswordValidation() {
     document.getElementById("conWarn").style.display = "block";
     document.getElementById("tick6").style.display = "none";
   }
-  else if(!(document.getElementById("password").value.match(validPass))) {
+  else if(document.getElementById("password").value.match(validPass)===false) {
    document.getElementById("conWarn").innerHTML="Password field is invalid!"
    document.getElementById("conWarn").style.display = "block";
    document.getElementById("tick6").style.display = "none";
