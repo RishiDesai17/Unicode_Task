@@ -10,9 +10,9 @@
 
 <body>
   <div class="">
-    <h4>Name:</h4>
+    <h4>Name*:</h4>
     <input type="text" id="name" name="" value="">
-    <p style="display: none; color: red;" id="NameWarn">Enter valid Name</p>
+    <p style="display: none; color: red;" id="nameWarn">Enter Name</p>
     <div id="tick1" style="display: none; color: green;">
       <i class="fa fa-check" aria-hidden="true"></i>
     </div>
@@ -25,7 +25,7 @@
     </div>
   </div>
   <div style="display: block;">
-    <h4>Contact  No.:</h4>
+    <h4>Contact No.*:</h4>
     <input type="text" id="number" name="" value="">
     <p style="display: none; color: red;" id="phWarn">Enter valid Contact No.</p>
     <div id="tick3" style="display: none; color: green;">
@@ -33,7 +33,7 @@
     </div>
   </div>
   <div style="display: block;">
-    <h4>Email:</h4>
+    <h4>Email*:</h4>
     <input type="email" id="email" name="" value="">
     <p style="display: none; color: red;" id="emWarn">Enter valid Email</p>
     <div id="tick4" style="display: none; color: green;">
@@ -41,14 +41,24 @@
     </div>
   </div>
   <div>
-    <h4>Password:</h4>
-    <input type="password" id="password" name="" value="">
-    <p><input type="checkbox" id="checkbox" name="" value="" onclick="showPassword()">Show Password</p>
+    <h4>Password*:</h4>
+    <input type="password" id="password" class="password" name="" value="">
+    <p><input type="checkbox" class="checkbox" name="" value="" onclick="showPassword()">Show Password</p>
+    <p style="display: none; color: red;" id="passWarn"><span>Your password should consist of:</span>
+      At least one number, one Uppercase Letter, one lowercase Letter and a special character</p>
     <div id="tick5" style="display: none; color: green;">
       <i class="fa fa-check" aria-hidden="true"></i>
     </div>
   </div>
-  <input type="submit" name="button" onclick="emailValidation();numberValidation();">
+  <div class="">
+    <h4>Confirm Password*:</h4>
+    <input type="password" id="confirm" class="password" name="" value="">
+    <p style="display: none; color: red;" id="conWarn">Passwords do not match!</p>
+    <div id="tick6" style="display: none; color: green;">
+      <i class="fa fa-check" aria-hidden="true"></i>
+    </div>
+  </div>
+  <input type="submit" name="button" onclick="nameValidation();emailValidation();numberValidation();passwordValidation();confirmPasswordValidation();">
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
