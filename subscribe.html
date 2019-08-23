@@ -34,7 +34,7 @@
 
   </div>
 
-  <div style="display: block; margin-top: 8%;">
+  <div class="form" style="display: block; margin-top: 8%;">
   <div style="display: block;">
     <h4>Name*:</h4>
     <input type="text" id="name" name="" value="">
@@ -52,14 +52,20 @@
   </div>
   <div class="">
     <h4>Gender*:</h4>
-    <div>
-    <input type="radio" id="Male" name="Male" value="Male" checked>
+    <form style="display: block;">
+    <div style="display: inline-block;">
+    <input type="radio" class="gender" id="Male" name="gender" value="Male" checked>
     <label for="Male">Male</label>
   </div>
-  <div>
-  <input type="radio" id="Female" name="Female" value="Female">
+  <div style="display: inline-block;">
+  <input type="radio" class="gender" id="Female" name="gender" value="Female">
   <label for="Female">Female</label>
 </div>
+<div style="display: inline-block;">
+<input type="radio" class="gender" id="Female" name="gender" value="Other">
+<label for="Female">Other</label>
+</div>
+</form>
   </div>
   <div style="display: block;">
     <h4>Contact No.*:</h4>
@@ -80,8 +86,8 @@
   <div style="display: block;">
     <h4>Password*:</h4>
     <input type="password" id="password" class="password" name="" value="">
-    <p><input type="checkbox" class="checkbox" name="" value="" onclick="showPassword()">Show Password</p>
-    <p style="display: none; color: red;" id="passWarn"><span>Your password should consist of:</span>
+    <p><input type="checkbox" id="checkbox" name="" value="" onclick="showPassword()">Show Password</p>
+    <p style="display: none; color: red;" id="passWarn"><span>Your password should have 8 to 15 chracters and consist of:</span>
       At least one number, one Uppercase Letter, one lowercase Letter and a special character</p>
     <div id="tick5" style="display: none; color: green;">
       <i class="fa fa-check" aria-hidden="true"></i>
@@ -95,9 +101,20 @@
       <i class="fa fa-check" aria-hidden="true"></i>
     </div>
   </div>
-  <input type="submit" name="button" onclick="nameValidation();emailValidation();numberValidation();passwordValidation();confirmPasswordValidation();">
+  <button type="submit" name="button" class="btn btn-success" onclick="nameValidation();emailValidation();numberValidation();passwordValidation();confirmPasswordValidation();
+  if(nameValidation() && emailValidation() && numberValidation() && passwordValidation() && confirmPasswordValidation()){
+    store();
+    display();
+  }">Submit</button>
   </div>
-
+<div style="float: right;">
+  <p id="namedisp"></p>
+  <p id="lastnamedisp"></p>
+  <p id="genderdisp"></p>
+  <p id="emaildisp"></p>
+  <p id="numberdisp"></p>
+  <p id="passdisp"></p>
+</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
