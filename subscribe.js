@@ -11,15 +11,20 @@ function showPassword() {
 function nameValidation() {
   if (document.getElementById("name").value === "") {
     document.getElementById("nameWarn").style.display = "block";
-    document.getElementById("tick3").style.display = "none";
+    document.getElementById("tick1").style.display = "none";
     return false;
   } else {
-    document.getElementById("tick3").style.display = "inline-block";
+    document.getElementById("tick1").style.display = "inline-block";
     document.getElementById("nameWarn").style.display = "none";
     return true;
   }
 }
-
+function lastNameValidation(){
+  document.getElementById("tick2").style.display = "inline-block";
+}
+function genderValidation(){
+  document.getElementById("tick6").style.display = "inline-block";
+}
 function numberValidation() {
   var validPh = /^\d{10}$/;
   if (document.getElementById("number").value.match(validPh)) {
@@ -102,8 +107,8 @@ function store(){
 function display(){
   document.getElementById("namedisp").innerHTML = "Name: "+localStorage.getItem("name");
   document.getElementById("lastnamedisp").innerHTML = "Last Name: "+localStorage.getItem("last name");
-  document.getElementById("genderdisp").innerHTML = localStorage.getItem("gender");
+  document.getElementById("genderdisp").innerHTML = "Gender: "+localStorage.getItem("gender");
   document.getElementById("emaildisp").innerHTML = "Email: "+localStorage.getItem("Email");
   document.getElementById("numberdisp").innerHTML = "Contact No."+localStorage.getItem("Contact No.");
-  document.getElementById("passdisp").innerHTML = l"***";
+  document.getElementById("passdisp").innerHTML = "Password: ***";
 }
